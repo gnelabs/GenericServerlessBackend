@@ -1,0 +1,11 @@
+version = 1.0
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "GenericServerlessBackend"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-tcvo0pj5vf3f"
+s3_prefix = "GenericServerlessBackend"
+region = "us-east-1"
+parameter_overrides = "AttachLambdaFunctionToVPC=\"false\" Stage=\"prod\""
