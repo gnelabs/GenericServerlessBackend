@@ -29,7 +29,7 @@ def lambda_handler(event, context):
         return {
             'statusCode': 400,
             'body': json.dumps(
-                {'2fa_login_successful': False, 'message': 'No parameters specified or missing parameters.'},
+                {'login_successful': False, 'message': 'No parameters specified or missing parameters.'},
                 cls=LambdaMessageEncoder
             ),
             'headers': {'Content-Type': 'application/json'}
@@ -40,7 +40,7 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps(
-            {'2fa_login_successful': True, 'message': 'Successfully authenticated. Logging in.'},
+            {'login_successful': True, 'message': 'Successfully authenticated. Logging in.'},
             cls=LambdaMessageEncoder
         ),
         'headers': {'Content-Type': 'application/json'}

@@ -1,5 +1,4 @@
 requests
 boto3
 jinja2
-robin-stocks
 pytz
